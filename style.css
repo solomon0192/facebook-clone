@@ -199,6 +199,7 @@ h3{
     .flex2{
         display: flex;
         justify-content: initial;
+        flex-direction: column;
         margin: 0%;
         text-align: center;
 
@@ -216,18 +217,45 @@ h3{
         text-align:center ;
     }
 
+    .myname{
+        margin-left: 145px;
+    }
+
     .prof{
-        margin-left: 50px;
+        /* margin-left: 50px; */
         text-align: center;
     }
 
     .plus2{
         text-align: center;
+        margin-left: 150px;
     }
 
     .otherside{
         text-align: center;
-        margin-left: 40px;
+        margin-left: 100px; 
+        margin-top: 120px;
+        background-color: white;
+        box-shadow: 1px 1px 1.5px 1.5px rgb(165, 164, 164);
+        height: 350px;
+        width: 270px;
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+    
+    }
+
+    #pas{
+        width: 240px;
+    }
+
+    #phno{
+        width: 240px;
+    }
+
+    #login{
+        width: 240px;
     }
     
 }
