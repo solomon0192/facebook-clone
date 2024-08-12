@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="registry">
+
+        <h1>Register Here</h1>
+
+    <p><input type="text" name="" id="phno1" placeholder="First Name">
+    </p>
+    <p><input type="text" name="" id="pas1" placeholder="middlename"></p>
+    <p><input type="text" name="" id="pas2" placeholder="lastname"></p>
+    <p><input type="number" name="" id="num" placeholder="number"></p>
+    <p><input type="password" name="" id="pas3" placeholder="create password"></p>
+    <p><input type="password" name="" id="pas4" placeholder="confirm password"></p>
+
+    <button id="register">Register</button>
+    </div>
+
+    <style>
+
+        h1{
+            color: blue;
+        }
+        #pas1,#pas2,#pas3,#num,#pas4{
+        
+        height: 30px;
+        width: 500px;
+        border-radius: 5px;
+        border: 1px solid silver;
+        padding: 5px;
+        font-size: 17px;
+        margin-top: 20px;
+        }
+
+        #register{
+            height: 30px;
+            width: 200px;
+            background-color: blue;
+            font-size: 17px;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .registry{
+            text-align: center;
+            background-color: white;
+            box-shadow: 1px 1px 1.5px 1.5px rgb(87, 86, 86);
+            height: 500px;
+            width: 700px;
+            margin-left: 300px;
+            margin-top: 50px;
+            padding-top: 50px;
+
+        }
+
+        body{
+            text-align: center;
+        }
+
+        @media screen and (max-width: 780px) {
+            .registry{
+            text-align: center;
+            /* background-color: white; */
+            box-shadow: none;
+            height: 300px;
+            width: 500px;
+            /* margin-left: 300px; */
+            margin-top: 50px;
+            padding-top: 50px;
+            margin-left: 0%;
+
+            
+
+        }
+
+        #pas1,#pas2,#pas3,#num,#pas4,#phno1{
+        
+        height: 25px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid silver;
+        padding: 5px;
+        font-size: 17px;
+        margin-top: 20px;
+        }
+
+        }
+
+
+    </style>
+
+    <script>
+
+document.getElementById("register").onclick = function() {
+    // alert("hi")
+
+let phno1 = document.getElementById("phno1").value
+let pas1 = document.getElementById("pas1").value
+let pas2 = document.getElementById("pas2").value
+let num = document.getElementById("num").value
+let pas3 = document.getElementById("pas3").value
+let pas4 = document.getElementById("pas4").value
+
+if(phno1 === "") {
+    alert("input your firstname")
+}
+if(pas1 === "") {
+    alert("input your middlename")
+}if(pas2 === "") {
+    alert("input your lastname")
+}if(num === "") {
+    alert("input your phone number")
+}if(pas3 === "") {
+    alert("create a strong password")
+}if(pas4 === "") {
+    alert("confirm your password")
+}
+if(pas3 <= 8){
+    alert("create a stronger password")
+}
+if(pas3 !== pas4) {
+    alert("the two passwords doesn't match")
+}
+if(num.length !== 11){
+    alert("incorrect phone number")
+}
+// if(num.length >= 11){
+//     alert("incorrect phone number")
+// }
+
+if(pas3.length !== 8){
+    alert("password must be up to  8 characters and must contain at least a number, an alphabet, and a symbol")
+}
+else{
+    alert("congratulations, your account has been created go to home page and login")
+    window.location.href = "index.html"
+}
+}
+    </script>
+    
+</body>
+</html>
